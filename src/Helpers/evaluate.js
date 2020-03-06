@@ -17,12 +17,12 @@ const evaluate = string => {
         }
 
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === '/' || arr[i] === '*') {
+            if (arr[i] === '÷' || arr[i] === '×') {
                 switch (arr[i]) {
-                    case '/':
+                    case '÷':
                         arr.splice(i - 1, 3, arr[i - 1] / arr[i + 1]);
                         break;
-                    case '*':
+                    case '×':
                         arr.splice(i - 1, 3, arr[i - 1] * arr[i + 1]);
                         break;
                 }

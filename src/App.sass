@@ -29,7 +29,8 @@ button
     &:active
         background-color: lighten(#a9a9a9, 20%) !important
 .zero
-    width: 185px !important
+    grid-column: 1 / 3
+    min-width: 80% !important
     border-radius: 50px !important
     text-align: left
     padding-left: 2rem
@@ -58,9 +59,10 @@ button
     .body
         width: 100%
         height: 70%
-        display: flex
-        flex-direction: column
-        justify-content: space-around
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(5, 1fr)
+        justify-items: center
         &-row
             display: flex
             justify-content: space-between
@@ -98,8 +100,6 @@ button
                 width: 60px
                 height: 60px
                 font-size: 1.6rem
-    .zero
-        width: 130px !important
 
 @media (min-width:375px) and (max-width:480px)
     .App
@@ -111,8 +111,6 @@ button
                 width: 70px
                 height: 70px
                 font-size: 1.7rem
-    .zero
-        width: 160px !important
 
 @media (min-width:481px) and (max-width:768px)
     .App
@@ -128,5 +126,4 @@ button
                 height: 120px
                 font-size: 2.5rem
     .zero
-        width: 320px !important
         border-radius: 60px !important
